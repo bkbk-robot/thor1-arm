@@ -1,0 +1,17 @@
+# Thor 1.0 — AI Voice Control for 6-DOF Robotic Arm
+# One person + AI tools = one serious robot team.
+
+# Core control
+pyserial>=3.5
+
+# Voice / AI (install only what you need)
+# whisper        # OpenAI Whisper (GPU recommended: pip install openai-whisper)
+# faster-whisper # Lighter alternative: pip install faster-whisper
+
+# Optional: LLM integration (tested with DeepSeek via OpenAI-compatible API)
+# openai>=1.0    # pip install openai
+# anthropic      # pip install anthropic
+
+# Optional: HTTP server for REST control
+# fastapi>=0.100
+# uvicorn>=0.23
