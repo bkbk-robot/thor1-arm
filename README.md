@@ -1,5 +1,7 @@
 # Thor 1.0 — AI Voice Control for 6-DOF Robotic Arm
 
+[![Release](https://img.shields.io/badge/Release-v0.1.0-blue?style=flat-square&label=July%202026)](https://github.com/bkbk-robot/thor1-arm/releases/tag/v0.1.0)
+
 > *2026,一个人在咖啡店里,没有团队,用消费级零件和AI工具,让机械臂听得懂人话。*
 > *One person + AI tools = one serious robot team.*
 
@@ -115,6 +117,16 @@ Thor 2.0 (in progress):
 **My code:** MIT License (see [LICENSE](LICENSE))
 
 **Thor mechanical parts:** Creative Commons Attribution-ShareAlike — [fpga-mobotics/thor](https://github.com/fpga-mobotics/thor)
+
+---
+
+---
+
+## 🆕 Recent Updates
+
+**2026-07-13 — v0.1.0 released!** First open source release with full voice control pipeline.
+- 65+ cloners, 155+ clones since launch
+- Thor 2.0 in progress: stepper motors + vision + RL training
 
 ---
 
