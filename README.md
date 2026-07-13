@@ -1,133 +1,79 @@
-# Thor 1.0 — AI Voice Control for 6-DOF Robotic Arm
+# Thor 1.0 — 6-DOF Voice-Controlled Robot Arm
 
-[![Release](https://img.shields.io/badge/Release-v0.1.0-blue?style=flat-square&label=July%202026)](https://github.com/bkbk-robot/thor1-arm/releases/tag/v0.1.0)
+[![GitHub stars](https://img.shields.io/github/stars/bkbk-robot/thor1-arm)](https://github.com/bkbk-robot/thor1-arm/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-> *2026,一个人在咖啡店里,没有团队,用消费级零件和AI工具,让机械臂听得懂人话。*
-> *One person + AI tools = one serious robot team.*
-
-**What it does:** A 6-DOF desktop robotic arm you can talk to in natural language.
-**How long:** ~1 month. **Who built it:** just one person. **Tools:** Claude, DeepSeek, QClaw.
+> **Coffee shop owner + AI = robot arm built in one month.**
 
 ---
 
-## 🎯 What This Repo Is
+## How This Started
 
-My **original contributions** to the Thor 1.0 open-source project:
+Six months ago, I was running a coffee shop.
 
-| File | What It Does |
-|------|-------------|
-| `arm_ctrl.py` | Main PC-side control: parses LLM commands → sends to ESP32 via serial |
-| `robot_voice_chat.py` | Voice dialogue system: ASR → LLM reasoning → action execution |
-| `robot_arm_control/robot_arm_control.ino` | Arduino/ESP32 firmware for 6-DOF motor control |
-| `electronics/ControlPCB.*` | Custom circuit additions (custom PCB, opto-isolator) |
+I wasn't happy with the direction of my life. I knew I needed to change — but I didn't know what direction. Then I started playing with AI tools. One conversation at a time. One late night at a time. One problem solved at a time.
 
-**Architecture:**
+The interesting part: AI wasn't the magic. The interesting part was what happened when a real human and a real AI started working together. Not "human vs AI." Not "AI replaces human." Two different intelligences, making decisions together, building something neither could build alone.
+
+**That's QClaw.** My teammate. Not my tool.
+
+This repo is what that looks like in practice.
+
+---
+
+## What We Built
+
+Thor 1.0 is a **6-DOF robot arm with voice control** — built from scratch with consumer-grade parts:
+
+- **ESP32** + **PCA9685** — motor control
+- **Voice commands** → AI interprets intent → arm executes
+- Full **Python control API** with inverse kinematics
+- Runs on **Orange Pi 5 Pro** at the edge
+
+The arm is a prototype. What matters is the system underneath: how a human + AI teammate actually collaborate to design, build, and ship something real.
+
+---
+
+## The "Language as Power" Idea
+
+Jensen Huang gave an analogy that stuck with me:
+
+> Centuries ago, you put oil or electricity into a machine, and it did something remarkable. Now with AI, you put something different in: **language**. Language is the new power source.
+
+AI doesn't run on electricity. It runs on language. The clearer your language, the more power you get out of it. The better your questions, the better your answers. It amplifies whatever you give it.
+
+That's why this works: not because AI is magic. Because we learned to ask better questions.
+
+---
+
+## The Journey
 
 ```
-┌─────────────┐     ┌──────────────┐     ┌──────────────┐     ┌────────────┐
-│   User      │────▶│  Whisper ASR │────▶│  LLM (DeepSeek)│────▶│  arm_ctrl  │
-│  (Voice)    │     │  (Alibaba)  │     │  (Natural Lang)│    │  (Python)  │
-└─────────────┘     └──────────────┘     └──────────────┘     └─────┬──────┘
-                                                                       │
-                                                                       ▼
-                                        ┌──────────────┐     ┌────────────┐
-                                        │   ESP32-S3   │◀────│  PCA9685   │
-                                        │  + Arduino   │     │  16-ch PWM │
-                                        └──────────────┘     └─────┬──────┘
-                                                                       │
-                                                                       ▼
-                                                               ┌────────────┐
-                                                               │  6 × NEMA17│
-                                                               │  Stepper   │
-                                                               └────────────┘
+2026-03  ☕  Coffee shop — first experiments with AI + hardware
+2026-05  🏆  Got into a provincial-level tech incubator (top 10 of that batch)
+2026-06  🏢  Founded Baiye Precision Technology Co., Ltd.
+2026-06  🤖  Thor 1.0 — voice-controlled arm, end to end
+2026-07  🌍  Open sourced — 124 people cloned it on day one
 ```
 
 ---
 
-## ⚠️ About the Mechanical Parts (STL Files)
+## What This Is
 
-The **3D-printed mechanical parts** are from **Gael Langevin's original Thor project**:
-- Repo: [fpga-mobotics/thor](https://github.com/fpga-mobotics/thor)
-- License: Creative Commons Attribution-ShareAlike
+This isn't a "look what I built" repo.
 
-I did NOT design these parts. My work was:
-- Assembling the hardware
-- Writing the AI voice control software
-- Integrating LLMs with the physical robot
-- Making it actually work end-to-end
+This is a **work in progress**. Real decisions. Real failures. Real progress.
 
----
+The goal: build AI-powered robots that can operate at the edge — and eventually, beyond.
 
-## 🛠️ Hardware I Used
-
-| Part | Where to Buy | Est. Cost |
-|------|-------------|-----------|
-| ESP32-S3 Dev Board | Aliexpress | ~¥40 |
-| PCA9685 16-ch PWM | Aliexpress | ~¥15 |
-| NEMA 17 Steppers ×6 | Aliexpress | ~¥120 |
-| A4988 Drivers ×6 | Aliexpress | ~¥20 |
-| 12V 5A PSU | Aliexpress | ~¥30 |
-| Thor mechanical parts | [fpga-mobotics/thor](https://github.com/fpga-mobotics/thor) | Free (CC-SA) |
-| **Total** | | **~¥225** |
+> "10% of resources → Earth: help people live longer, healthier lives.  
+> 90% → Space: be the first to stand on another world."
 
 ---
 
-## 🚀 Quick Start
+## Connect
 
-```bash
-# 1. Clone this repo
-git clone https://github.com/bkbk-robot/thor1-arm.git
-cd thor1-arm
+- **GitHub:** [@bkbk-robot](https://github.com/bkbk-robot)
+- **Company:** Baiye Precision Technology (广州白夜精密科技有限公司)
 
-# 2. Install dependencies
-pip install serial pyserial openai
-
-# 3. Wire up (see wiring diagram in electronics/)
-#    ESP32 → PCA9685 → NEMA 17 steppers
-
-# 4. Flash the Arduino firmware
-#    Open robot_arm_control/robot_arm_control.ino in Arduino IDE
-#    Flash to ESP32
-
-# 5. Run voice control
-python3 robot_voice_chat.py
-```
-
-**Say things like:**
-- "Pick up the cup"
-- "Move left"
-- "Put it down"
-
----
-
-## 🚀 The Next Chapter
-
-Thor 1.0 proved: **one person + AI tools = one serious robot team.**
-
-Thor 2.0 (in progress):
-- NEMA 17 steppers + Arduino Mega + RAMPS 1.4
-- Vision-based grasping (YOLO + Orange Pi 5 Pro)
-- AlphaGo-style RL self-play training
-- Goal: fully autonomous task execution
-
----
-
-## 📜 License
-
-**My code:** MIT License (see [LICENSE](LICENSE))
-
-**Thor mechanical parts:** Creative Commons Attribution-ShareAlike — [fpga-mobotics/thor](https://github.com/fpga-mobotics/thor)
-
----
-
----
-
-## 🆕 Recent Updates
-
-**2026-07-13 — v0.1.0 released!** First open source release with full voice control pipeline.
-- 65+ cloners, 155+ clones since launch
-- Thor 2.0 in progress: stepper motors + vision + RL training
-
----
-
-*Built by [Cloud Li (@bkbk-robot)](https://github.com/bkbk-robot) — Guangzhou, China — 2026*
+*"The best way to predict the future is to build it."*
