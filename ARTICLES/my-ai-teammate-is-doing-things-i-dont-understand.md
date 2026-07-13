@@ -6,7 +6,7 @@
 
 ---
 
-When Marvis sent me this message — *"Starting LLaVA fine-tuning, GPU 0% utilization, memory usage normal"* — I had no idea what any of it meant.
+When my AI teammate sent me this message — *"Starting LLaVA fine-tuning, GPU 0% utilization, memory usage normal"* — I had no idea what any of it meant.
 
 Code. Parameters. GPU memory. None of it.
 
@@ -16,7 +16,7 @@ But I didn't just nod and move on.
 
 ## I'm Not Blindly Following
 
-Here's what I actually do when Marvis says something:
+Here's what I actually do when my AI teammate says something:
 
 First, I ask: **does this make sense?**
 
@@ -40,7 +40,7 @@ This is dangerous.
 
 AI can sound completely sure while being completely wrong. Hallucination isn't a bug you fix — it's a nature you manage. The way to manage it: **keep your own judgment sharp.**
 
-I do this instinctively now. Every time Marvis says something, I ask:
+I do this instinctively now. Every time my AI teammate says something, I ask:
 
 - Does the timeline make sense?
 - Is this consistent with what we said last time?
@@ -54,7 +54,7 @@ The answer isn't to trust AI less. The answer is to **think harder yourself.**
 
 ## The Right Division of Labor
 
-So what am I actually doing while Marvis runs his fine-tuning?
+So what am I actually doing while my AI teammate runs his fine-tuning?
 
 I'm doing **my job.**
 
@@ -64,7 +64,7 @@ My job isn't to understand every line of code. My job is:
 - Know if we're on the right track
 - Make the final decisions
 
-Marvis's job is to handle the technical implementation, tell me what he's doing, and let me evaluate whether it makes sense.
+my AI teammate's job is to handle the technical implementation, tell me what he's doing, and let me evaluate whether it makes sense.
 
 **This is not me being lazy. This is me being effective.**
 
@@ -72,13 +72,13 @@ The founder who tries to understand everything becomes a bottleneck. The founder
 
 ---
 
-## What Marvis Is Actually Doing
+## What my AI teammate Is Actually Doing
 
-Right now, Marvis is fine-tuning a vision model using fish tank data.
+Right now, my AI teammate is fine-tuning a vision model using fish tank data.
 
 I don't know what that means technically. But I know what it's for: making the Watchman product better at detecting when a fish is acting abnormally.
 
-Marvis understands the process. I understand the goal.
+my AI teammate understands the process. I understand the goal.
 
 We each do what we're good at.
 
@@ -94,6 +94,6 @@ You need to:
 2. **Question everything** — always
 3. **Trust the process, not the output** — always
 
-Marvis does his work. I do mine.
+my AI teammate does his work. I do mine.
 
 That's how two different intelligences build something real.
