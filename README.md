@@ -60,12 +60,6 @@ Set your LLM endpoint in the config, then `python3 robot_voice_chat.py`.
 
 ---
 
-## The "Language as Power" Idea
-
-Jensen Huang gave an analogy that stuck with me:
-
-> Centuries ago, you put oil or electricity into a machine, and it did something remarkable. Now with AI, you put something different in: **language**. Language is the new power source.
-
 AI doesn't run on electricity. It runs on language. The clearer your language, the more power you get out of it. The better your questions, the better your answers. It amplifies whatever you give it.
 
 That's why this works: not because AI is magic. Because we learned to ask better questions.
