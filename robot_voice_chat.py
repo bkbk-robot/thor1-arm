@@ -16,10 +16,6 @@ import os
 from gtts import gTTS
 
 # ====== 配置 ======
-API_KEY = "sk-slnwhmmuadvnvsmtohpfbtuoapkpfdyuncjjiychfwghewpn"
-API_HOST = "https://api.siliconflow.cn/v1"
-STT_MODEL = "FunAudioLLM/SenseVoiceSmall"  # SiliconFlow 语音识别
-# TTS 用 gTTS（免费，无需API），备选硅基流动 IndexTTS
 
 # 录音参数
 CHANNELS = 1
