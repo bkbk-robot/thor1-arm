@@ -34,6 +34,32 @@ The arm is a prototype. What matters is the system underneath: how a human + AI 
 
 ---
 
+## How to Run
+
+**1. Flash the firmware** — `robot_arm_control/robot_arm_control.ino` for **ESP32-S3 + PCA9685** (I2C `SDA=21, SCL=22`; MG996R servos on channels 0–5: base · shoulder · elbow · wrist-pitch · wrist-roll · gripper). The firmware serves a tiny HTTP API (`GET /status`, `GET /set?ch=&val=`) the Python side drives.
+
+**2. Install Python deps**
+```bash
+pip install -r requirements.txt   # pyserial + optional voice/LLM extras
+```
+
+**3. Drive the arm**
+```bash
+python3 arm_ctrl.py --ch 5 --target 120   # close gripper (gradual 20°/step)
+python3 arm_ctrl.py --ch 1 --target 78    # move shoulder to 78°
+python3 arm_ctrl.py --ch 0 --step +2       # nudge base +2°
+```
+
+**4. Talk to it** — `robot_voice_chat.py` runs the full edge voice loop:
+```
+microphone → STT (SenseVoice) → LLM (intent) → TTS (gTTS) → speaker
+```
+Set your LLM endpoint in the config, then `python3 robot_voice_chat.py`.
+
+> Inverse-kinematics helpers and the full control API live in `arm_ctrl.py`. The arm is a prototype — treat the angles as a starting point and tune for your hardware.
+
+---
+
 ## The "Language as Power" Idea
 
 Jensen Huang gave an analogy that stuck with me:
