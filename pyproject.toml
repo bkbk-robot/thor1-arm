@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thor1-arm"
+version = "0.1.0"
+description = "Thor 1.0: 6-DOF Arduino Robotic Arm with AI Voice Control"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+authors = [
+    {name = "Cloud", username = "bkbk-robot"}
+]
+keywords = ["robotics", "robot-arm", "arduino", "voice-control", "ai", "physical-ai", "edge-computing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Robotics",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyserial>=3.5",
+    "requests>=2.28",
+]
+
+[project.urls]
+Homepage = "https://github.com/bkbk-robot/thor1-arm"
+Issues = "https://github.com/bkbk-robot/thor1-arm/issues"
+
+[tool.setuptools]
+packages = ["robot_arm_control"]
