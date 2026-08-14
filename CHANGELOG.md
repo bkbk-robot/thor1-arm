@@ -26,9 +26,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Updated repository topics: added `lerobot`, `physical-ai`, `embodied-ai`, `do-it-yourself` tags for better discoverability in the physical AI ecosystem
+- Starred and tracking LeRobot ecosystem projects: PAROL6, any4lerobot, LeIsaac, VLA dataset toolkit, sim2real
+
 ### Planned
 - Inverse kinematics solver for Cartesian control
 - Grasp preset sequences (pick, place, wave)
 - WebSocket streaming for real-time telemetry
 - ROS2 bridge node
+- LeRobot dataset format export for teleop recordings
 
