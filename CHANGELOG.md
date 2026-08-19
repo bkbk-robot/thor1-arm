@@ -30,10 +30,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated repository topics: added `lerobot`, `physical-ai`, `embodied-ai`, `do-it-yourself` tags for better discoverability in the physical AI ecosystem
 - Starred and tracking LeRobot ecosystem projects: PAROL6, any4lerobot, LeIsaac, VLA dataset toolkit, sim2real
 
+### Added
+- SO-101 URDF calibration imported and verified in NVIDIA Isaac Sim (2026-08-16): full URDF + 26 STL assets load correctly, joint layout confirmed for sim training
+- LeRobot `isaac_teleop_to_so101` example pipeline ready on dev machine: `teleoperate.py` / `record.py` for teleop data collection in Isaac Sim
+
 ### Planned
 - Inverse kinematics solver for Cartesian control
 - Grasp preset sequences (pick, place, wave)
 - WebSocket streaming for real-time telemetry
 - ROS2 bridge node
 - LeRobot dataset format export for teleop recordings
-
+- Isaac Lab training setup (install `isaaclab` + `rsl-rl`, then run RL training for reach/grasp tasks on SO-101)
