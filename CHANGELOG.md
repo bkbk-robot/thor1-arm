@@ -33,6 +33,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - SO-101 URDF calibration imported and verified in NVIDIA Isaac Sim (2026-08-16): full URDF + 26 STL assets load correctly, joint layout confirmed for sim training
 - LeRobot `isaac_teleop_to_so101` example pipeline ready on dev machine: `teleoperate.py` / `record.py` for teleop data collection in Isaac Sim
+- SO-101 reach task RL training completed end-to-end in Isaac Lab (2026-08-19): custom `SO101-Reach-v0` environment (512 parallel envs, 15-dim obs), trained with rl_games PPO — reward climbed from -11 to +2.18 in 185s at ~69k FPS on RTX 5060 Ti; checkpoint exported to `nn/so101_reach_direct.pth`
+- Isaac Lab environment source published under `isaaclab_tasks/direct/so101_reach/` (env, agents/rl_games_ppo_cfg, train script) — first full sim2real training pipeline on the Thor project
 
 ### Planned
 - Inverse kinematics solver for Cartesian control
@@ -40,4 +42,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - WebSocket streaming for real-time telemetry
 - ROS2 bridge node
 - LeRobot dataset format export for teleop recordings
-- Isaac Lab training setup (install `isaaclab` + `rsl-rl`, then run RL training for reach/grasp tasks on SO-101)
+
